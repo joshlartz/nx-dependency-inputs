@@ -1,0 +1,12 @@
+{
+  "name": "lib2",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "options": {
+        "cwd": "packages/lib2"
+      },
+      "inputs": ["lib", "^src"]
+    }
+  }
+}

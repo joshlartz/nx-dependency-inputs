@@ -1,0 +1,12 @@
+{
+  "name": "app1",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "options": {
+        "cwd": "packages/app1"
+      },
+      "inputs": ["src", "^src", "^lib"]
+    }
+  }
+}

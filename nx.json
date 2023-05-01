@@ -1,0 +1,33 @@
+{
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "nx/tasks-runners/default",
+      "options": {
+        "cacheableOperations": ["build", "test", "lint"]
+      }
+    }
+  },
+  "cli": {
+    "packageManager": "pnpm"
+  },
+  "namedInputs": {
+    "lib": ["{projectRoot}/tsconfig.json", "{projectRoot}/lib/**/*", "{projectRoot}/package.json"],
+    "src": [
+      "{projectRoot}/src/**/*",
+      "{projectRoot}/package.json",
+      "{projectRoot}/tsconfig.json",
+      "{projectRoot}/configs/**/*"
+    ]
+  },
+  "targetDefaults": {
+    "build": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": ["rm -rf dist", "tsc"],
+        "parallel": false
+      },
+      "outputs": ["{projectRoot}/dist"],
+      "dependsOn": ["^build"]
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "nx-dependency-inputs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "nx affected --base=main --target=build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18",
+    "nx": "^15",
+    "typescript": "^4"
+  }
+}
